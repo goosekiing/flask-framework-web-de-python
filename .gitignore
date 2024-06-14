@@ -1,0 +1,8 @@
+# Arquivos:
+.env
+
+# Diretorios:
+/uploads
+/__pycache__
+/.mypy_cache
+venv

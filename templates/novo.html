@@ -1,0 +1,40 @@
+{% extends "template.html" %} {% block conteudo %}
+<form
+class="formularioJogo"
+  action="{{ url_for('criar') }}"
+  method="post"
+  enctype="multipart/form-data"
+>
+  <figure class="img-thumbnail col-md-4 formularioImagem">
+    <img
+      class="img-fluid"
+      src="{{ url_for('imagem', nome_arquivo='sem_imagem.jpg') }}"
+    />
+    <figcaption>
+      <label class="fileContainer">
+        Mudar Capa
+        <input type="file" name="arquivo" accept=".jpg" />
+      </label>
+    </figcaption>
+  </figure>
+  <fieldset>
+    {{ form.csrf_token }}
+    <div class="form-group">
+      {{ form.nome.label(class="form-label inputBox") }} {{
+      form.nome(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.categoria.label(class="form-label inputBox") }} {{
+      form.categoria(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.console.label(class="form-label inputBox") }} {{
+      form.console(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.salvar(class="btn btn-primary buttons") }}
+      <a class="btn btn-danger buttons" href="{{ url_for('index') }}">Voltar</a>
+    </div>
+  </fieldset>
+</form>
+{% endblock %}
