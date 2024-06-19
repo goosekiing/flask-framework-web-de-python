@@ -52,7 +52,7 @@ flask-framework-web-de-python/
 ## How to Run the Project
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/flask-framework-web-de-python.git
+   git clone https://github.com/goosekiing/flask-framework-web-de-python.git
    ```
 2. Navigate to the project directory:
    ```sh
